@@ -1,0 +1,50 @@
+html, body{
+    height: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+
+#artiCentral{
+
+    margin-right: 50px;
+    margin-top: 43px;
+    margin-bottom: 10px;
+}
+
+#articulo1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 43px;
+    margin-bottom: 10px;
+}
+
+#lat{
+    float:left;
+    width: 20%;
+    height: 100%;
+}
+
+#filacol{
+    overflow:hidden;
+}
+
+#col1{
+    display: inline-block;
+    width: 20%;
+    margin-left:auto;
+}
+
+#col2{
+    display: inline-block;
+    width: 20%;
+    margin-left:50px;
+}
+
+#col3{
+    display: inline-block;
+    width: 20%;
+    margin-left:50px;
+}

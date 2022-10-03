@@ -1,0 +1,126 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+footer{
+    height: 5%;
+}
+
+div{
+    background-color: #42a6e9;
+    margin:5px;
+    text-align: center;
+}
+
+#head{
+    overflow: hidden;
+    width: 100%;
+}
+
+
+#tit{
+    float: left;
+    width: 75%;
+    text-align: left;
+    padding: 30px;
+    border: 1px solid;
+}
+
+
+
+#logo{
+    float: left;
+    padding: 30px;
+    border: 1px solid;
+    margin:10px;
+}
+
+#NavBarContenedor{
+    height: 10%;
+}
+
+#NavBar{
+    float:left;
+    text-align: left;
+    padding-left: 10px;
+    height: 90%;
+    width: 60%;
+}
+
+#identif{
+    float:right;
+    height: 65%;
+    width: 15%;
+    border: 1px solid;
+    margin: 10px;
+    text-align: center;
+}
+
+#idtext{
+    margin: 5%;
+}
+#container{
+    overflow: hidden;
+    height: 70%;
+    background-color: transparent;
+}
+
+#contenido{
+    height: 100%;
+    width:30%;
+    display:none
+
+}
+
+#opciones{
+    height:100%;
+    width:20%;
+    display:none
+}
+
+#cont-articulos{
+    float: left;
+    overflow: hidden; 
+    width:65%;
+    height:100%;
+    background-color: white;
+   
+}
+
+#articulo1,#articulo2{
+    display: inline-block;
+    width:100%;
+    height:50%;
+}
+
+#cont-busqueda-noticias{
+    float: left;
+    overflow: hidden; 
+    width:33%;
+    height:100%;
+
+   
+}
+
+#busqueda{  
+    display: inline-block;
+    width:90%;
+    height:30%;
+    border: 1px solid;
+    margin:15px;
+}
+
+#noticias{  
+    display: inline-block;
+    width:90%;
+    height:45%;
+    border: 1px solid;
+    margin:10px;
+}
+
+#footer{
+    height: 95%;
+    text-align: center;
+    padding: 25px;
+}

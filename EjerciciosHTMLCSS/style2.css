@@ -1,0 +1,70 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+footer{
+    height: 10%;
+}
+
+div{
+    background-color: #42a6e9;
+    margin:5px;
+    text-align: center;
+}
+
+#head{
+    overflow: hidden;
+    height: 10%;
+    width: 100%;
+}
+
+#titulo{
+    display: inline-block;
+    height: 5%;
+    width: 100%;
+}
+
+
+#logo{
+    float: left;
+    padding: 30px;
+    border: 1px solid;
+    margin:10px;
+    display:none;
+}
+
+#NavBarContenedor{
+    height: 10%;
+    display:none;
+}
+
+
+#container{
+    overflow: hidden;
+    height: 70%;
+    width: 100%;
+    background-color: white;
+}
+
+#contenido{
+    display: inline-block;
+    height: 100%;
+    width:75%;
+}
+
+#opciones{
+    float: left;
+    height:100%;
+    width:23%;
+}
+
+#cont-articulos{
+    display: none;
+}
+
+#footer{
+    height: 95%;
+    text-align: center;
+    padding: 25px;
+}
