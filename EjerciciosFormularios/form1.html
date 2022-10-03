@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario1</title>
+    <link rel="stylesheet" href="formstyle.css">
+</head>
+<body>
+
+
+<div id="container">
+    <div id="titulo"><h2>Suscripción a la Revista</h2></div>
+
+    <form>
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label>Nombre:</label><input name='nombre' type='text'>
+            <label>Primer Apellido:</label> <input name='primer apellido' type='text'>
+            <label>Segundo Apellido: </label> <input name='segundo apellido' type='text'><br><br>
+            <label>Dirección: </label><input name='direccion' type='text' value="calle o plaza, número y piso."><br><br>
+            <label>e-mail:</label><input name='e-mail' type='text' value="@"><br><br>
+            <label>contraseña:</label><input name='contraseña' type='password' value=""><br><br>
+            <label>sexo</label><br>
+            <input type="radio" id="varon" name="sexo" value="Varón">
+            <label for="varon">Varón</label><br>
+            <input type="radio" id="mujer" name="sexo" value="Mujer">
+            <label for="mujer">Mujer</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Nivel de estudios e intereses</legend>
+            <label for="estudios">Nivel de estudios:</label>
+            <input list="estudios" name="estudios" id="estudio">
+            <datalist id="estudios">
+                <option value="Cestificado Escolar">
+                <option value="ESO">
+                <option value="Bachillerato">
+                <option value="Grado Medio">
+                <option value="Grado Superior">
+                <option value="Grado Universitario">
+                <option value="Postgrado">
+            </datalist>
+            <label>Recibir artículos de los siguientes temas:</label><br>
+            <input type="checkbox" id="art2" name="art2" value="Música">
+            <label for="art2"> Música</label><br>
+            <input type="checkbox" id="art3" name="art3" value="Deportes">
+            <label for="art3"> Deportes</label><br>
+            <input type="checkbox" id="art4" name="art4" value="Cine">
+            <label for="art4"> Cine</label><br>
+            <input type="checkbox" id="art5" name="art5" value="Libros">
+            <label for="art5">libros </label><br>
+            <input type="checkbox" id="art6" name="art6" value="Ciencia">
+            <label for="art6"> Ciencia</label><br>
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Datos sobre la revista</legend>
+            <label for="freq">Freciencia con que se recibirá la revista:</label><br>
+            <input list="freq-list" name="frecuencias" id="freq">
+            <datalist id="freq-list">
+                <option value="semanal">
+                <option value="mensual">
+            </datalist>
+
+            <p>puedes mandar tu artículo sobre culquier tema de los que tratamos. Nosotros lo valoraremos para que pueda ser publicado.</p>
+            <label>mandar artículo:</label>
+            <input type="file" value="seleccionar archivo">
+            <label>Si deseas mandar simplemente una opinión o comentario escribelo aqui</label>
+            <textarea>Escribe tu comentario:</textarea>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Comenzar de Nuevo</legend>
+        <label>Borrar todos los datos del formulario y volver a empezar:</label>
+            <div id="boton-res"> <button> <intput type="reset" value="borrar todo"></intput> Borrar todo</button></div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>enviar</legend>
+            <label>Enviar formulario por correo electrónico: Al pulser en el botón se abrirá el envío de correo: en esa página pulsa en enviar</label>
+            <div id="boton-sub"><button> <intput type="submit" value="sub"></intput> enviar por correo</button></div>
+        </fieldset>
+
+
+
+
+
+    </fieldset>
+    </form>
+</div>
+</body>
+</html>

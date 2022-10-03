@@ -1,0 +1,36 @@
+body{
+    background-color: #42a6e9 !important;
+}
+
+h1 {
+    color: #333333;
+    font-family: verdana;
+    font-size: 300%;
+}
+
+.encabezado{
+    height: 80px !important;
+}
+
+
+.contenido{
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+
+/*.abs-center {
+    margin-top: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;*/
+
+/*min-height: 100vh;*/
+
+/*}
+
+.form {
+  background-color:aliceblue;
+  width: 450px;
+}*/

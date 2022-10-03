@@ -1,0 +1,17 @@
+
+.rojo {
+    color:red;
+}
+.resaltado {
+    background:lightgray;
+}
+
+#tc {
+    font-style: italic;
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+}
+
+table td{
+
+}
