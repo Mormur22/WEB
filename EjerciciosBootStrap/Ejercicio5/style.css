@@ -1,0 +1,33 @@
+.html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #ffc244
+}
+
+.container-fluid{
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    margin-bottom:4rem;
+    margin-tom:8rem;
+
+}
+
+.h3,span{
+    font-size: xxx-large;
+}
+
+.row{
+    width: 100%;
+    height: 20%;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+
+}
+
+img:[src$=".png"]{
+    width: 8rem;
+    cursor:pointer;
+}

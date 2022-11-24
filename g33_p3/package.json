@@ -1,0 +1,23 @@
+{
+  "name": "g33_p3",
+  "version": "1.0.0",
+  "description": "AW - Práctica voluntaria 3",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ucm",
+    "fdi",
+    "aw",
+    "práctica",
+    "voluntaria",
+    "G33"
+  ],
+  "author": "Daniel Compán y Alejandro Moreno",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

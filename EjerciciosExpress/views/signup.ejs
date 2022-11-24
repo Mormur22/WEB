@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <title><%=title %></title>
+
+    <link rel="stylesheet" href="/css/stilo.css" media="screen">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="m-0 row justify-content-center">
+        <div class="col-auto p-5 text-center">
+            <h1 class="display-1"><strong>Back2Study</strong></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row vh-80 justify-content-center align-items-center">
+            <div class="col-auto bg-light p-5 rounded">
+                <% if (msgRegistro) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%=msgRegistro%>
+                    </div>
+                <% } %>
+                <% if (errores) { %>
+                    <% if(typeof(errores) !== "undefined"){%>
+                        <% if(errores.username){%>
+                            <div class="alert alert-danger" role="alert">
+                                <%=errores.username.msg%>
+                            </div>
+                        <%}%>
+                       <% if(errores.correo){%>
+                            <div class="alert alert-danger" role="alert">
+                                <%=errores.correo.msg%>
+                            </div>
+                        <%}%>
+                        <% if(errores.password){%>
+                            <div class="alert alert-danger" role="alert">
+                                <%=errores.password.msg%>
+                            </div>
+                        <%}%>
+                        <% if(errores.password2){%>
+                            <div class="alert alert-danger" role="alert">
+                                <%=errores.password2.msg%>
+                            </div>
+                        <%}%>
+                    <%}%>
+                <%}%>
+                <form action="/usuarios/registro_Usuario" method="POST" enctype="multipart/form-data">
+                    <h1 class="display-6 text-center">Registrarse</h1>
+                    <!--Los campos vacios se comprueban con el campo 'required'-->
+                    <div class="input-group p-2">
+                        <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Nombre de usuario">
+                    </div>
+                    <div class="input-group p-2">
+                        <input type="email" name="correo" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com">
+                        
+                    </div>
+                    <div class="input-group">
+                        
+                    </div>
+                    <div class="input-group p-2">
+                        <input type="password" name="password" class="form-control" id="floatingInput" placeholder="Contraseña" >
+                    </div>
+                    <div class="input-group">
+                        
+                    </div>
+                    <div class="input-group p-2">
+                        <input type="password" name="password2" class="form-control" id="floatingInput" placeholder="Confirmar contraseña" >
+                    </div>
+                    <div class="input-group">
+                        
+                    </div>
+                    <br>
+
+                    <button type="submit" class="btn btn-primary w-100">Registarse</button>
+                    <a href="/" class="link-dark "><h6 class="h6 text-center">Ya estoy registrado</h5></a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include("footer") %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "ejemploBasico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "paginaEstatica2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

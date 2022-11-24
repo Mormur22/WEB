@@ -1,0 +1,45 @@
+#cabecera {
+    display: none;
+}
+
+.t_accion {
+    display: none;
+}
+
+#t_botones{
+    display: none;
+}
+
+.completa {
+    text-decoration: line-through;
+}
+
+#contenido{
+
+}
+
+#t_titulo {
+    font-family: Helvetica;
+    font-size: 18px;
+}
+
+.tarea {
+    font-family: Helvetica;
+    font-size: 12px;
+}
+
+.t_nombre::after {
+    content: ":";
+}
+
+.t_etiqueta {
+    margin-left: -20px;
+}
+
+.t_etiqueta::before {
+    content: "(";
+}
+
+.t_etiqueta::after {
+    content: ")";
+}

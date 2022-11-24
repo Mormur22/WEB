@@ -21,10 +21,11 @@ label {
     color: slateGray;
     padding-left: 15px;
     text-indent: -15px;
+    width: 100%;
 }
 
 input {
-
+    width: 100%;
 }
 
 checkbox{

@@ -1,0 +1,27 @@
+{
+  "name": "prueba1",
+  "version": "1.0.0",
+  "description": "Esto es un proyecto de prueba",
+  "main": "prueba1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ucm",
+    "fdi",
+    "aw",
+    "node",
+    "proyecto",
+    "prueba"
+  ],
+  "author": "Jesús Cáceres",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "mocha": "^9.1.3",
+    "mysql": "^2.18.1",
+    "os-homedir": "^2.0.0",
+    "text-table": "^0.2.0"
+  },
+  "devDependencies": {}
+}

@@ -1,17 +1,57 @@
+.html,body{
+    width: 100%;
+    height: 100%;
 
-.rojo {
-    color:red;
-}
-.resaltado {
-    background:lightgray;
 }
 
-#tc {
-    font-style: italic;
-    border-collapse: separate;
-    border-spacing: 10px 5px;
+.container-fluid{
+    padding-left:0;
+    padding-right:0;
+    width: 100%;
 }
 
-table td{
+.nav-item{
+    margin-right: 6em;
+    text-align: center
 
+}
+
+.navfont {
+    color: #4285F4;
+    padding: 1em;
+}
+
+img[src$=".png"]{
+    float: start;
+}
+
+img[src="anon.png"]
+{
+    padding: 2em;
+}
+
+img[src="logo.png"]
+{
+    padding-left: 2em;
+}
+
+.container task{
+    width: 70%;
+}
+
+.badge{
+    font-size: large;
+    margin-top: 1.2em;
+}
+
+.col{
+    padding: 1em;
+}
+
+.badge bg-danger{
+    size: 10em;
+}
+
+row{
+    border-style: solid;
 }
