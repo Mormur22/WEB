@@ -1,0 +1,76 @@
+-- Todas las tareas y etiquetas
+SELECT u.idUser, u.email, t.idTarea, t.texto, ut.hecho, e.idEtiqueta, e.texto
+FROM aw_tareas_usuarios u
+JOIN aw_tareas_user_tareas ut ON u.idUser = ut.idUser
+JOIN aw_tareas_tareas t ON ut.idTarea = t.idTarea
+JOIN aw_tareas_tareas_etiquetas te ON t.idTarea = te.idTarea
+JOIN aw_tareas_etiquetas e ON te.idEtiqueta = e.idEtiqueta;
+
+-- Solo Usuarios y tareas
+SELECT u.idUser, u.email, t.idTarea, t.texto, ut.hecho
+FROM aw_tareas_usuarios u
+JOIN aw_tareas_user_tareas ut ON u.idUser = ut.idUser
+JOIN aw_tareas_tareas t ON ut.idTarea = t.idTarea;
+
+-- Tareas hechas del usuario a borrar
+SELECT u.idUser, u.email, t.idTarea, t.texto, ut.hecho
+FROM aw_tareas_usuarios u
+JOIN aw_tareas_user_tareas ut ON u.idUser = ut.idUser
+JOIN aw_tareas_tareas t ON ut.idTarea = t.idTarea
+WHERE u.email = 'bill.puertas@ucm.es' AND ut.hecho = 1;
+
+-- Borrar todas las relaciones de las tareas hechas del usuario en la tabla USER-TAREAS
+DELETE FROM aw_tareas_user_tareas WHERE idUser = 4 AND (idTarea = 1 OR idTarea = 3);
+
+-- Solo tareas y etiquetas
+SELECT t.idTarea, t.texto, e.idEtiqueta, e.texto
+FROM aw_tareas_tareas t
+JOIN aw_tareas_tareas_etiquetas te ON t.idTarea = te.idTarea
+JOIN aw_tareas_etiquetas e ON te.idEtiqueta = e.idEtiqueta;
+
+-- Borrar todas las relaciones de las tareas hechas del usuario en la tabla TAREAS-ETIQUETAS
+DELETE FROM aw_tareas_tareas_etiquetas WHERE idTarea IN (6,7);
+
+-- Solo tareas
+SELECT * FROM aw_tareas_tareas;
+
+-- Solo Etiquetas
+SELECT * FROM aw_tareas_etiquetas ORDER BY idEtiqueta ASC
+
+-- Borrar todas las tareas hechas del usuario en la tabla TAREAS
+DELETE FROM aw_tareas_tareas WHERE idTarea IN (6,7);
+
+-- Borrar todas las etiquetas de las tareas hechas del usuario que no son reutilizadas en la tabla ETIQUETAS
+DELETE FROM aw_tareas_etiquetas WHERE idEtiqueta IN (8,9,10,11)
+
+-- Tareas que hay que borrar
+SELECT u.idUser, u.email, t.idTarea, t.texto, ut.hecho, e.idEtiqueta, e.texto
+FROM aw_tareas_usuarios u
+JOIN aw_tareas_user_tareas ut ON u.idUser = ut.idUser
+JOIN aw_tareas_tareas t ON ut.idTarea = t.idTarea
+JOIN aw_tareas_tareas_etiquetas te ON t.idTarea = te.idTarea
+JOIN aw_tareas_etiquetas e ON te.idEtiqueta = e.idEtiqueta
+WHERE u.email = 'bill.puertas@ucm.es' AND ut.hecho = 1;
+
+-- Tareas que no hay que borrar
+SELECT u.idUser, u.email, t.idTarea, t.texto, ut.hecho, e.idEtiqueta, e.texto
+FROM aw_tareas_usuarios u
+JOIN aw_tareas_user_tareas ut ON u.idUser = ut.idUser
+JOIN aw_tareas_tareas t ON ut.idTarea = t.idTarea
+JOIN aw_tareas_tareas_etiquetas te ON t.idTarea = te.idTarea
+JOIN aw_tareas_etiquetas e ON te.idEtiqueta = e.idEtiqueta
+WHERE (u.email != 'bill.puertas@ucm.es') OR (u.email = 'bill.puertas@ucm.es' AND ut.hecho = 0);
+
+-- Nueva tarea para "bill.puertas@ucm.es" (idUser = 4)
+-- Comprar cerveza | hecho = 1 | [Fiesta, Finde]
+INSERT INTO aw_tareas_tareas (texto) VALUES ('Comprar cerveza');
+INSERT INTO aw_tareas_user_tareas (idUser, idTarea, hecho) VALUES (4,6,1);
+INSERT INTO aw_tareas_etiquetas (texto) VALUES ('Fiesta'), ('Finde');
+INSERT INTO aw_tareas_tareas_etiquetas (idTarea, idEtiqueta) VALUES (6,9), (6,10);
+
+-- Nueva tarea para "bill.puertas@ucm.es" (idUser = 4)
+-- Comprar hamburgesas | hecho = 1 | [Personal, Barbacoa, Básico]
+INSERT INTO aw_tareas_tareas (texto) VALUES ('Comprar hamburgesas');
+INSERT INTO aw_tareas_user_tareas (idUser, idTarea, hecho) VALUES (4,7,1);
+INSERT INTO aw_tareas_etiquetas (texto) VALUES ('Barbacoa');
+INSERT INTO aw_tareas_tareas_etiquetas (idTarea, idEtiqueta) VALUES (7,5), (7,11), (7,8);

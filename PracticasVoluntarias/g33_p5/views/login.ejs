@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <title><%=title %></title>
+    
+    <link rel="stylesheet" href="/css/tasksScreen.css" media="screen"/>
+    <!-- <link rel="stylesheet" href="public/css/stilo.css" media="screen"/> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    
+</head>
+
+<body>
+    <!--Centrar en bootstrap: https://codea.app/blog/centrar-div-boostrap -->
+<!-- ENCABEADO-->    
+    <div class="m-0 row align-items-center">
+
+        <div id="logo" class="col col-sm-6 col-md-7 col-lg-8 col-xl-9">
+            <img src="./img/favicon.ico" />
+        </div>
+        
+    </div>
+
+    <div class="col-auto p-12 text-center" style="margin-bottom:5rem">
+        <h1 class="display-1"><strong>Gestor de Tareas</strong></h1>
+    </div>
+
+<!-- CONTENIDO -->
+    <div class="container">
+        
+        <div class="row vh-80 justify-content-center align-items-center">
+        
+            <div class="col-auto p-5 rounded" style="background-color: #EDEDED ;">
+
+                <% if (msgRegistro) { %>
+                    <div class="alert <%=tipoAlert%> alert-dismissible fade show " role="alert">
+                        <strong><%=msgRegistro%></strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <% } %>
+                
+                <form action="/login_user" method="POST" enctype="multipart/form-data">
+                    <h1 class="display-6 text-center" style="margin-bottom:2.5rem">Iniciar Sesión</h1>
+                    <div class="input-group p-2">
+                        <input type="email" name="correo" class="form-control" id="floatingInput" placeholder="nombre@correo.es">
+                    </div>
+                    
+                    <div class="input-group p-2">
+                        <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                        
+                    </div><br>
+                    <button type="submit" class="btnlog w-100">Iniciar Sesión</button>
+                </form>
+            </div>
+            
+            
+        </div>
+        
+            
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#ppal {
+    height: 100%;
+    width: 100%; 
+}
+
+#cabecera {
+    width: 100%;
+    position: fixed;
+    padding: 5px;
+    background-image: linear-gradient(lightslategrey,white);
+}
+
+#logo{
+    text-align: left;
+}
+
+#logo > img {
+    height: 100px;
+    width: 100px;
+}
+
+#user_avatar {
+    text-align: right;
+}
+
+#user_avatar > img {
+    height: 80px;
+    width: 80px;
+}
+
+#user_name {
+    color: steelblue;
+    font-size: large;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#logout_btn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+#contenido {
+    width: 100%;
+    padding-top: 10em
+}
+
+#t_lista {
+    align-self: center;
+}
+
+.tarea {
+    margin: 3em 3em 5px 20px;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    border-style: solid;
+    padding: 10px;
+}
+
+.t_nombre {
+    margin-right: 20px;
+    font-family: "Indie Flower", Arial;
+    font-weight: bolder;
+    font-size: 24pt;
+    color: midnightblue;
+}
+
+.t_etiqueta {
+    margin-left: 20px;
+    border: 1px solid orange;
+    border-radius: 25px;
+    padding: 3px 30px 3px 20px;
+    font-family: Farsan, Calibri;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20pt;
+    color: brown;
+    background-color: orange;
+}
+
+.t_accion {
+    margin-top: 5px;
+}
+
+.completa {
+    text-decoration: line-through;
+    color: red;
+}
+
+#t_botones {
+    margin-top: 30px;
+}
+
+.ptr_text {
+    display: none;
+}
+
+
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+  .form input {
+    width: 90%;
+    height: 30px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form button {
+    padding: 0.5em 1em;
+    margin-bottom: 2rem;
+    border: none;
+    background: rgb(100, 200, 255);
+    cursor: pointer;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+}
+.close:before, 
+.close:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 20px;
+    background-color: #ff0707;
+    transform: rotate(45deg) translate(-50%, -50%);
+    transform-origin: top left;
+    content: '';
+}
+.close:after {
+    transform: rotate(-45deg) translate(-50%, -50%);
+}
+
+.btnlog{
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255) !important;
+    background-color: cadetblue !important;
+    border-color: cadetblue !important
+}
+
+
+
+.btnlog:hover, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn {
+    color: rgb(255, 255, 255) !important;
+    background-color:rgb(35, 77, 78) !important;
+    border-color: rgb(39, 80, 82) !important; /*set the color you want here*/
+}

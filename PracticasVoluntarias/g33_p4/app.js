@@ -72,6 +72,7 @@ app.post("/addTask", (request, response) => {
         if(err) {
             console.log(err.message);
         }
+        response.status(200);
         response.redirect("/tasks");
     });
 });
@@ -87,7 +88,6 @@ app.get("/finish/:task_id",(request, response)=>{
         }
 
         else{
-            console.log("funciona");
             response.status(200);
             response.redirect("/tasks");
         }
@@ -98,7 +98,6 @@ app.get("/finish/:task_id",(request, response)=>{
             response.status(500); 
             console.log(err.message);
         } else {
-            response.status(200);
             console.log(listaTask)
             response.render("tasks.ejs",{listaTask:listaTask});
         }

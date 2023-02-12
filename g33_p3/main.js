@@ -119,10 +119,10 @@ function cb_insertTask(err) {
 //console.log("daoTask.getAllTasks(\"bill.puertas@ucm.es\",cb_getAllTasks);");
 //daoTask.getAllTasks("bill.puertas@ucm.es",cb_getAllTasks);
 
-//console.log("daoTask.insertTask(\"bill.puertas@ucm.es\", { text: \"Comprar cerveza\", done: false, tags: [\"Ocio\", \"Personal\", \"Fiesta\", \"Básico\", \"Finde\"] }, cb_insertTask);");
-//daoTask.insertTask("bill.puertas@ucm.es", { text: "Comprar cerveza", done: false, tags: ["Ocio", "Personal", "Fiesta", "Básico", "Finde"] }, cb_insertTask);
-//console.log("daoTask.insertTask(\"bill.puertas@ucm.es\", { text: \"Hablar con el profesor\", done: false, tags: [\"Universidad\", \"Matematicas\"] }, cb_insertTask);");
-//daoTask.insertTask("bill.puertas@ucm.es", { text: "Hablar con el profesor", done: false, tags: ["Universidad", "Matematicas"] }, cb_insertTask);
+console.log("daoTask.insertTask(\"bill.puertas@ucm.es\", { text: \"Comprar cerveza\", done: false, tags: [\"Ocio\", \"Personal\", \"Fiesta\", \"Básico\", \"Finde\"] }, cb_insertTask);");
+daoTask.insertTask("bill.puertas@ucm.es", { text: "Comprar cerveza", done: false, tags: ["Ocio", "Personal", "Fiesta", "Básico", "Finde"] }, cb_insertTask);
+console.log("daoTask.insertTask(\"bill.puertas@ucm.es\", { text: \"Hablar con el profesor\", done: false, tags: [\"Universidad\", \"Matematicas\"] }, cb_insertTask);");
+daoTask.insertTask("bill.puertas@ucm.es", { text: "Hablar con el profesor", done: false, tags: ["Universidad", "Matematicas"] }, cb_insertTask);
 
 //console.log("daoTask.markTaskDone(0,cb_markTaskDone);");
 //daoTask.markTaskDone(0,cb_markTaskDone);
