@@ -1,2 +1,2 @@
 # WEB
-Repositorio de la asignatura de AW
+Repositorio de la asignatura de Aplicaciones Web
